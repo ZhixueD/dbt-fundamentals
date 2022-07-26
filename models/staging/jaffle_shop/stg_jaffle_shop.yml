@@ -5,7 +5,7 @@ models:
     description: Staged customer data from our jaffle shop app.
     columns:
       - name: customer_id
-        test:
+        tests:
           - unique
           - not_null
 
