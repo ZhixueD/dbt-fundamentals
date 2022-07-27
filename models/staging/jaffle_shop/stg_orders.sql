@@ -8,6 +8,8 @@ with orders as (
 
     from {{source('jaffle_shop', 'orders')}}
 
+    {{ limit_data_in_days('order_date', 1600) }}
+
 )
 
-select * from orders
+select * from orders order by order_date
